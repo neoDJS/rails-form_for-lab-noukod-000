@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
 
     def app_params(*args)
-      self.controller_name.classify
+      # self.controller_name.classify
       params.require(self.controller_name.classify).permit(*args)
     end
 end
